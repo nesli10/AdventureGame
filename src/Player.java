@@ -43,7 +43,7 @@ public class Player {
                             initPlayer(new Samurai());
                             break;
         }
-        System.out.println( "karakter: " +this.getName());
+        System.out.println( "karakter: " +this.getName() + ", " + "Hasar :" + this.getDamage() + ", " + "Sağlık :" + this.getHealth() + ", " + "Para :" + this.getHealth());
 
     }
 
@@ -53,6 +53,7 @@ public class Player {
    this.money=gameChar.getMoney();
    this.name=gameChar.getName();
     }
+
 
     public int getDamage() {
         return damage;
