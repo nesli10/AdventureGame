@@ -10,9 +10,20 @@ public class Player {
     private String charName;
     private Scanner input=new Scanner(System.in);
 
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
+    private Inventory inventory;
+
 
     public Player(String name){
         this.name= name;
+        this.inventory= new Inventory();
     }
     public void selectChar(){
         GameChar[] characters = {new Samurai(),new Knighter(),new Archer()};
