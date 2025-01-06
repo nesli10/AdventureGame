@@ -43,7 +43,7 @@ public class Player {
                             initPlayer(new Samurai());
                             break;
         }
-        System.out.println( "karakter: " +this.getName() + ", " + "Hasar :" + this.getDamage() + ", " + "Sağlık :" + this.getHealth() + ", " + "Para :" + this.getHealth());
+        System.out.println( "karakter: " +this.getName() + ", " + "Hasar :" + this.getDamage() + ", " + "Sağlık :" + this.getHealth() + ", " + "Para :" + this.getMoney());
 
     }
 
