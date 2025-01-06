@@ -13,6 +13,7 @@ public class Game
         Location location = null;
 
         while (true){
+                player.printInfo();
                 System.out.println("bölgeler:");
                 System.out.println("1 - güvenli ev");
                 System.out.println("2  - mağaza");

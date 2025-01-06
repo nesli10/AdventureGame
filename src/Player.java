@@ -54,7 +54,7 @@ public class Player {
                             initPlayer(new Samurai());
                             break;
         }
-        System.out.println( "karakter: " +this.getName() + ", " + "Hasar :" + this.getDamage() + ", " + "Sağlık :" + this.getHealth() + ", " + "Para :" + this.getMoney());
+        //System.out.println( "karakter: " +this.getName() + ", " + "Hasar :" + this.getDamage() + ", " + "Sağlık :" + this.getHealth() + ", " + "Para :" + this.getMoney());
 
     }
 
@@ -65,9 +65,19 @@ public class Player {
    this.name=gameChar.getName();
     }
 
+    public void printInfo(){
+        System.out.println(
+                       "silahınız: " +this.getInventory().getWeapon().getName() +
+                        ", " + "Hasar :" + this.getDamage() +
+                        ", " + "Sağlık :" + this.getHealth() +
+                        ", " + "Para :" + this.getMoney()
+
+        );
+    }
+
 
     public int getDamage() {
-        return damage;
+        return damage + this.getInventory().getWeapon().getDamage();
     }
 
     public void setDamage(int damage) {
