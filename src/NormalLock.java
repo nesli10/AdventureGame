@@ -1,7 +1,7 @@
 public class  NormalLock extends  Location {
 
     public NormalLock(Player player, String name){
-        super(player);
+        super(player, name);
     }
 
 

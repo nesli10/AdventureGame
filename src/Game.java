@@ -15,8 +15,11 @@ public class Game
         while (true){
                 player.printInfo();
                 System.out.println("bölgeler:");
-                System.out.println("1 - güvenli ev");
-                System.out.println("2  - mağaza");
+                System.out.println("1 - Güvenli ev");
+                System.out.println("2  - Mağaza");
+                System.out.println("3  - Mağara  -----> ödül: <yemek>");
+                System.out.println("4  - Orman   -----> ödül: <odun>");
+                System.out.println("5  - Nehir   -----> ödül: <su>");
                 System.out.print("0 - çıkış yap ");
                 int selectLock = input.nextInt();
                 switch (selectLock){
@@ -29,8 +32,17 @@ public class Game
                     case 2 :
                         location = new ToolStore(player);
                         break;
+                    case 3 :
+                        location = new Cave(player);
+                        break;
+                    case 4 :
+                        location = new Forest(player);
+                        break;
+                    case 5:
+                        location = new River(player);
+                        break;
                     default:
-                        location = new SafeHouse(player);
+                        System.out.println("lütfen geçerli bir bölge giriniz!!");
 
                 }
                 if (location == null){
